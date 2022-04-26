@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+        'composer/ca-bundle' => array(
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/./ca-bundle',
+            'aliases' => array(),
+            'reference' => '4c679186f2aca4ab6a0f1b0b9cf9252decb44d0b',
+            'dev_requirement' => false,
+        ),
+        'mollie/mollie-api-php' => array(
+            'pretty_version' => 'v2.42.1',
+            'version' => '2.42.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mollie/mollie-api-php',
+            'aliases' => array(),
+            'reference' => '1ced5854c98af5cffca09b1093156ebdac277285',
+            'dev_requirement' => false,
+        ),
+    ),
+);

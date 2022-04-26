@@ -1,0 +1,5 @@
+h3 {
+    font-weight: 100;
+}
+
+h4.total {background-color: #8bc34a;display: block;width: fit-content;border-radius: 3px;margin-left: 12px;margin-top: 12px;/* padding: 0px; */color: white;font-weight: 300;}
