@@ -1,6 +1,8 @@
 <?php 
 require 'includes/header.php';
 require 'classes/sandwich.php';
+require 'classes/payment.php';
+require_once('vendor/autoload.php');
 $type = $_REQUEST['type'];
 $email = $_REQUEST['email'];
 // print_r($_REQUEST['topping']);
@@ -30,11 +32,30 @@ $order = new Sandwich($type,$topping);
      
       echo "<br><br><b>Totaal te betalen:</b> <h4 class='total'>".$order->calculate()." €</h4>";
       echo "<br><br><b>Totaal te betalen:</b> <h4 class='total'>".$order->calculate()." €</h4>";
+
+      $mollie = new \Mollie\Api\MollieApiClient();
+      $mollie->setApiKey("test_57M5WVvEFJEQ5PSrq553GnEGADQySA");
+      $payment = $mollie->payments->create([
+            "amount" => [
+                  "currency" => "EUR",
+                  "value" => $order->calculate() // You must send the correct number of decimals, thus we enforce the use of strings
+            ],
+            "description" => $order->whatType(),
+            "redirectUrl" => "http://localhost:8000/thankyou.php",
+            "webhookUrl" => "https://webshop.example.org/payments/webhook/",
+            "metadata" => [
+                  "order_id" => "12345",
+            ],
+      ]);
+
+      echo "<a class='btn btn-primary' href='".$payment->getCheckoutUrl()."'>PAY</a>";
     ?>
     </div>
 </div>
 
 <?php
+
+
 // mollie
 // instantier mollie object
 // geef beschrijving - $email."-".$order->whatType()
