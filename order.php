@@ -29,7 +29,8 @@ $order = new Sandwich($type,$topping);
         }
      
       echo "<br><br><b>Totaal te betalen:</b> <h4 class='total'>".$order->calculate()." €</h4>";
-      ?>
+      echo "<br><br><b>Totaal te betalen:</b> <h4 class='total'>".$order->calculate()." €</h4>";
+    ?>
     </div>
 </div>
 

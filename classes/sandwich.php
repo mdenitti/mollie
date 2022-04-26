@@ -14,10 +14,13 @@ class Sandwich {
 
     public function calculate() {
         $topping = 0;
+        // clear the total... for consecutive use... we need to send the right amount to mollie!
+        $this->total = 0;
         foreach($this->topping as $topping) {
             $this->total = $this->total + $topping;
         }
-        return $this->total + $this->type;
+        //return $this->total + $this->type;
+        return strval(number_format($this->total + $this->type, 2));
     }
 
     public function whatType() {
