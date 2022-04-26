@@ -16,7 +16,7 @@ require 'includes/header.php';
                 <label for="sandwich" class="form-label">Your sandwich</label>
                 <select class="form-select" name="type" required>
                     <option value="">Select your sandwiche</option>
-                    <option value="4">Smos (€4)</option>
+                    <option value="4.5">Smos (€4.50)</option>
                     <option value="5">Martino (€5)</option>
                     <option value="6">Vegan (€6)</option>
                 </select>

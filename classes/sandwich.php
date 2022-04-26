@@ -20,12 +20,13 @@ class Sandwich {
             $this->total = $this->total + $topping;
         }
         //return $this->total + $this->type;
+        // return string from number formated in 2 decimals...
         return strval(number_format($this->total + $this->type, 2));
     }
 
     public function whatType() {
-        if ($this->type == 4) {
-            return "Smos (€4)";
+        if ($this->type == 4.5) {
+            return "Smos (€4.50)";
         }
         if ($this->type == 5) {
             return "Martino (€5)";
