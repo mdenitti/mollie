@@ -8,7 +8,7 @@ require 'includes/header.php';
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" name="email" class="form-control" required>
+                <input type="email" name="email" class="form-control" value="test@test.com" required>
                 <div id="emailHelp" class="form-text">Use your e-mail when retrieving your sandwich.</div>
             </div>
 
