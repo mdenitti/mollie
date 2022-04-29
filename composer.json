@@ -1,5 +1,8 @@
 {
     "require": {
         "mollie/mollie-api-php": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
